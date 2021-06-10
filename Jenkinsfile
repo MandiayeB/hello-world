@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Hello-world maven') {
             steps {
-                git 'https://github.com/crunchy-devops/hello-world.git'
+                git 'https://github.com/MandiayeB/hello-world.git'
                 sh "mvn clean install package"
                 archiveArtifacts artifacts: '**/*.war', followSymlinks: false
             }
@@ -56,7 +56,7 @@ pipeline {
                 }
                 stage('Hello-world Selenium') {
                 steps {
-                        git 'https://github.com/crunchy-devops/hello-world.git'
+                        git 'https://github.com/MandiayeB/hello-world.git'
                         sh "mvn test"
                     }
                 }
